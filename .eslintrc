@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "prettier",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "varsIgnorePattern": "react|_"
+            }
+        ],
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            { "functions": false }
+        ],
+        "arrow-parens": ["error", "as-needed"],
+        "no-duplicate-imports": "error",
+        "no-irregular-whitespace": "error",
+        "react/prop-types": ["error", { "skipUndeclared": true }]
+    }
+}
